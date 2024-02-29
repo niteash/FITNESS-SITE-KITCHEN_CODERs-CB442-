@@ -11,15 +11,18 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
     />
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./node_modules/atropos/atropos.min.css">
     <link rel="stylesheet" href="styles.css" />
-    <title>Web Design Mastery | Power</title>
+    
+    <title>KITCHEN fitness</title>
   </head>
   <body>
     <header class="header">
       <nav>
         <div class="nav__header">
           <div class="nav__logo">
-            <a href="#"><img src="assets/logo.png" alt="logo" />Power</a>
+            <h1 href="#">KITCHEN <small class="child-nav">Fitness</small></h1>
           </div>
           <div class="nav__menu__btn" id="menu-btn">
             <span><i class="ri-menu-line"></i></span>
@@ -34,21 +37,35 @@
           <li class="link"><button class="btn">Contact Us</button></li>
         </ul>
       </nav>
-      <div class="section__container header__container" id="home">
-        <div class="header__image">
-          <img src="assets/header.png" alt="header" />
+      <div class="section__container pattern-triangles-lg  header__container" id="home">
+       
+       <!-- main Atropos container (required), add your custom class here -->
+<div class="atroposes">
+  <div class="atropos my-atropos">
+    <!-- scale container (required) -->
+    <div class="atropos-scale">
+      <!-- rotate container (required) -->
+      <div class="atropos-rotate">
+        <!-- inner container (required) -->
+        <div class="atropos-inner">
+          <!-- put your custom content here -->
+          <img src="./img/home.png" alt="">
         </div>
+      </div>
+    </div>
+  </div>
+</div>
         <div class="header__content">
           <h4>Build Your Body &</h4>
-          <h1 class="section__header">Shape Yourself!</h1>
+          <h1 class="section__header" id="header_text">Shape Yourself!</h1>
           <p>
-            Unleash your potential and embark on a journey towards a stronger,
-            fitter, and more confident you. Sign up for 'Make Your Body Shape'
-            now and witness the incredible transformation your body is capable
-            of!
+              
+             
+            <span id="element">
+            </span>
           </p>
           <div class="header__btn">
-            <button class="btn">Join Today</button>
+            <button class="btn btn-light p-2 fw-2">See More</button>
           </div>
         </div>
       </div>
@@ -421,6 +438,26 @@
 
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script src="main.js"></script>
   </body>
+  <script src="path/to/atropos.min.js"></script>
+
+  <script>
+     var typed = new Typed('#element', {
+      strings: ['<b>Unleash your potential <b>.', '<b>&amp; Embark on a journey towards a stronger<b>.'],
+    typeSpeed: 50,
+    backSpeed: 30,
+    backDelay:3000,
+    loop:true
+
+    
+    }  
+    );
+    const myAtropos = Atropos({
+    el: '.my-atropos',
+    // rest of parameters
+  });
+    
+  </script>
 </html>

@@ -1,4 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Ojuju:wght@200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Ojuju:wght@200..800&display=swap')
+
 
 :root {
   --primary-color: #f92524;
@@ -21,14 +24,34 @@
   margin: auto;
   padding: 5rem 1rem;
 }
+.header__content{
+  color: #f2f3f4;
+  margin-left: 8rem;
+}
+
+#element{
+  font-size: 2.8rem;
+}
+#home{
+  background-color: #132951
+  /* font-family: 'Komigo',' Regular'; */
+}
+
+#header_text{
+  font-family: "Abril Fatface", serif;
+  font-weight: 800;
+  font-style: normal;
+  color: #7da2e7;
+}
 
 .section__header {
   position: relative;
   padding-bottom: 0.5rem;
   margin-bottom: 1rem;
   font-size: 2.25rem;
-  font-weight: 600;
-  color: var(--text-dark);
+  color:var(--text-dark);
+  font-family: 'Komigo',' Regular';
+
 }
 
 .section__header::after {
@@ -46,7 +69,7 @@
   color: var(--text-light);
 }
 
-.btn {
+/* .btn {
   padding: 0.75rem 1.5rem;
   outline: none;
   border: none;
@@ -57,7 +80,7 @@
   border-radius: 5px;
   cursor: pointer;
   transition: 0.3s;
-}
+} */
 
 .btn:hover {
   background-color: var(--primary-color-dark);
@@ -87,13 +110,16 @@ body {
 }
 
 nav {
-  position: fixed;
-  isolation: isolate;
   width: 100%;
-  z-index: 9;
+  height: fit-content;
+  /* z-index: 9; */
 }
 
 .nav__header {
+  position: sticky;
+  top: 0;
+  z-index: -1;
+  overflow: auto;
   padding: 1rem;
   width: 100%;
   display: flex;
@@ -102,13 +128,19 @@ nav {
   background-color: var(--secondary-color);
 }
 
-.nav__logo a {
+.nav__logo h1 {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  font-size: 1.5rem;
-  font-weight: 600;
+  font-size: 2.5rem;
+  font-weight: 800;
   color: var(--text-dark);
+}
+
+
+.nav__logo .child-nav{
+  font-size: 2rem;
+  font-weight: 400;
 }
 
 .nav__logo img {
@@ -164,7 +196,8 @@ nav {
 .header__content h4 {
   font-size: 2.5rem;
   font-weight: 400;
-  color: var(--text-dark);
+  /* color: var(--text-dark); */
+  color: #7da2e7;
 }
 
 .header__content .section__header {
@@ -545,7 +578,9 @@ nav {
 
 @media (width > 768px) {
   nav {
-    position: static;
+    position: sticky;
+    top: 0;
+    z-index:10;
     padding: 2rem 1rem;
     max-width: var(--max-width);
     margin-inline: auto;
@@ -553,6 +588,7 @@ nav {
     align-items: center;
     justify-content: space-between;
     gap: 2rem;
+    background-color: white;
   }
 
   .nav__header {
